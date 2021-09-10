@@ -54,6 +54,10 @@ public extension ViewController {
     
     #if os(iOS)
     
+    func wrap(in navigationController: UINavigationController) {
+        navigationController.viewController = [self]
+    }
+    
     func showActivity(with string: String, sourceView: UIView, sourceRect: CGRect) {
         let types: [UIActivity.ActivityType] = [
             .airDrop,
