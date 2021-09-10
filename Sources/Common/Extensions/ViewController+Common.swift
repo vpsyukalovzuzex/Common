@@ -54,8 +54,9 @@ public extension ViewController {
     
     #if os(iOS)
     
-    func wrap(in navigationController: UINavigationController) {
+    func wrap(in navigationController: UINavigationController) -> Self {
         navigationController.viewControllers = [self]
+        return self
     }
     
     func showActivity(with string: String, sourceView: UIView, sourceRect: CGRect) {
